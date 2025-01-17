@@ -169,7 +169,69 @@ def print_playground_message():
         print("Sorry, your age is invalid!")
 
 
+def meow():
+    n = int(input("How many times do you want 'meow'? "))
+    for i in range(0,n):
+        print("meow")
+
+
+def number_of_dogs(pets):
+    total = 0
+    for i in range(len(pets)):
+        if pets[i].lower() == "dog":
+            total += 1
+    return total
+
+#Number Guessing Game
+def guessing_num():
+    import random
+
+    num = random.randint(1, 100)
+    guess = 0
+
+    print("   Welcome to the number guessing game!")
+    print("<<------------------------------------->>\n")
+    while True:
+        user = int(input("Guess the number: ")) 
+        if user > num:
+            print("The number is smaller!\nTry again!")
+            guess += 1
+        elif user < num:
+            print("The number is bigger!\nTry again!")
+            guess += 1
+        else:
+            print("\nCorrect!!!")
+            print(f"It took you {guess} guesses to get the correct number!\n")
+            break
+        
+
+#Number Guessing Game (Computer)
+def guess_num():
+    import random
+
+    low = 1
+    high = 100
+    feedback = ''
+
+    while feedback != 'c':
+
+        guess = random.randint(low, high)
+
+        feedback = input(f"Is the number {guess} too high(H) or too low(L) or correct(C): ").lower()
+
+        if feedback == "h":
+            high = guess - 1
+        elif feedback == 'l':
+            low = guess + 1
+    print("Yay! The computer guessed your number, {guess}, correctly!!!")
+
+
+#Rock, Paper, Scissors
+def rock_paper_scissors():
+    import random
+
+    
+
 #RUN
 if __name__ =="__main__":
-    print("Running")
-    print_playground_message()
+    rock_paper_scissors()
