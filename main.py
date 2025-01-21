@@ -20,7 +20,7 @@ def calculator():
     while True:
         num1 = float(input("\nEnter first number: "))
         num2 = float(input("Enter second number: "))
-        op = int(input("Please choose the number corresponding to the operation!!\n 1. Addition(+) \n 2. Subtraction(-) \n 3. Multiplication(x) \n 4. Division(÷) \nChoose: "))
+        op = int(input("Please choose the number corresponding to the operation!!\n 1. Addition(+) \n 2. Subtraction(-) \n 3. Multiplication(x) \n 4. Division(÷) \nChoice: "))
 
         if op == 1:
             ans = num1 + num2
@@ -100,7 +100,7 @@ def interest():
     r = float(input("Enter the interest rate %: "))
     t = int(input("Enter the amount of time: "))
 
-    res = round(p * (1 + ((r / 100))) ** t, 2)
+    res = round(p * (1 + (r / 100)) ** t, 2)
     print(f"You will have ${res} in {round(t, 0)} years.")
 
 
@@ -230,8 +230,26 @@ def guess_num():
 def rock_paper_scissors():
     import random
 
-    
+
+
+def while_loop():
+    i = 0
+    j = int(input("How many times you wanna hear meow? "))
+    while i < j:
+        print("Meow")
+        i += 1
+
+def mario_less():
+    while True:
+        height = int(input("Height: "))
+        if height < 1:
+            continue
+        else:
+            break
+    for j in range (1, height + 1):
+        print("#"*j)
+
 
 #RUN
 if __name__ =="__main__":
-    rock_paper_scissors()
+    mario_less()
