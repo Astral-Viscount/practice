@@ -1,5 +1,1 @@
-/.pytest_cache
-/.vscode
-/main.exe
-/hello.exe
-/cs.exe
+    **/*.exe
