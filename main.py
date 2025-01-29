@@ -252,4 +252,4 @@ def mario_less():
 
 #RUN
 if __name__ =="__main__":
-    mario_less()
+    calculator()
