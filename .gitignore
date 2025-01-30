@@ -4,6 +4,9 @@
 # Ignore all .ipynb files
 *.ipynb
 
+# Ignore all .pdf files
+*.pdf
+
 # Other ignored files and directories
 /node_modules
 /.pytest_cache
