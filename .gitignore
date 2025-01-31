@@ -11,6 +11,7 @@
 /node_modules
 /.pytest_cache
 /.vscode
+/.vs
 /bin
 /obj
 
