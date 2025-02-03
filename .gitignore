@@ -7,6 +7,9 @@
 # Ignore all .pdf files
 *.pdf
 
+# Ignore all .pdf files
+*.json
+
 # Other ignored files and directories
 /node_modules
 /.pytest_cache
