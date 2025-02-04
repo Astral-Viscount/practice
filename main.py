@@ -249,7 +249,18 @@ def mario_less():
     for j in range (1, height + 1):
         print("#"*j)
 
+def count_bits(n):
+    n = bin(n)
+    j = 0
+    for i in n:
+        if i == '1':
+            j = j + 1
+    return print(j)
 
 #RUN
 if __name__ =="__main__":
-    calculator()
+    count_bits(0)
+    count_bits(4)
+    count_bits(7)
+    count_bits(9)
+    count_bits(10)
