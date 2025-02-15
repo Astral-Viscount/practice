@@ -256,7 +256,7 @@ def count_bits(n):
         if i == '1':
             j = j + 1
     return print(j)
-
+    
 #RUN
 if __name__ =="__main__":
     count_bits(0)
