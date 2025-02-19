@@ -256,11 +256,13 @@ def count_bits(n):
         if i == '1':
             j = j + 1
     return print(j)
-    
+
+    # count_bits(0)
+    # count_bits(4)
+    # count_bits(7)
+    # count_bits(9)
+    # count_bits(10)
+
 #RUN
 if __name__ =="__main__":
-    count_bits(0)
-    count_bits(4)
-    count_bits(7)
-    count_bits(9)
-    count_bits(10)
+    print("Hello, world!")
