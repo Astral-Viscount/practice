@@ -262,7 +262,14 @@ def count_bits(n):
     # count_bits(7)
     # count_bits(9)
     # count_bits(10)
-
+#Factorial
+def factorial():
+    num = int(input("Number: "))
+    fact = 1
+    for i in range(1, num + 1):
+        fact *= i
+    print(f"{num}! = {fact}")
+    
 #RUN
 if __name__ =="__main__":
-    print("Hello, world!")
+    factorial()
