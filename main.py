@@ -262,6 +262,7 @@ def count_bits(n):
     # count_bits(7)
     # count_bits(9)
     # count_bits(10)
+
 #Factorial
 def factorial():
     num = int(input("Number: "))
@@ -269,7 +270,37 @@ def factorial():
     for i in range(1, num + 1):
         fact *= i
     print(f"{num}! = {fact}")
+
+#Bad Calculator
+def bad_calculator():
+    import random
+    import sys
+
+    while True:
+        try:
+
+            num = int(input("Enter a Number: "))
+
+            while True:
+
+                x = random.randint(0, num)
+                y = num - x
+                print(f"{x} + {y} = {num}")
+
+                ch = input("Press Enter to calculate again Or 'n' to enter a new number Or 'e' to Exit: ").lower()
+
+                if not ch and ch.lower() != 'n':
+                    continue
+                elif ch.lower() == 'e':
+                    print("Thanks!\nExiting...")
+                    sys.exit()
+                else:
+                    break
+
+        except ValueError:
+            print("Please enter a number!!!")
+            continue
     
 #RUN
 if __name__ =="__main__":
-    factorial()
+    bad_calculator()
