@@ -18,6 +18,7 @@
 /bin
 /obj
 /Problems
+test.py
 
 # Won't ignore these .exe files
 # !special.exe
