@@ -300,7 +300,24 @@ def bad_calculator():
         except ValueError:
             print("Please enter a number!!!")
             continue
+
+# Recursive Even Number Checker
+def is_even():
+    num = int(input("Number: "))
     
+    def even(n):
+        if n == 0:
+            print(f"{num} is an even number!")
+            return True
+
+        if n == 1:
+            print(f"{num} is an odd number!")
+            return False
+        
+        return even(n - 2)
+    
+    even(num)
+
 #RUN
 if __name__ =="__main__":
-    bad_calculator()
+    is_even()
