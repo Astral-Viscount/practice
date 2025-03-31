@@ -1,12 +1,17 @@
+//Header Files
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
 //Functions
 int guessing_game(void);
+int computer_guessing_game(void);
 
-int main()
+//Main Function
+int main(void)
 {
-
+    computer_guessing_game();
     return 0;
 }
 
@@ -46,4 +51,55 @@ int guessing_game(void)
             break;
         }       
     }
+}
+
+//Guessing Game (Computer)
+int computer_guessing_game(void)
+{
+    int high = 100;
+    int low = 1;
+    int guess;
+
+    char feedback[10];
+
+    while (1)
+    {
+        guess = rand() % (high - low + 1) + low;
+
+        printf("Is the number %i too high(H) or too low(L) or correct(C): ", guess);
+        scanf("%s", &feedback);
+
+        feedback[0] = tolower(feedback[0]);
+
+        if (strcmp(feedback, "h") == 0)
+        {
+            high = guess - 1;
+        }
+        else if (strcmp(feedback, "l") == 0)
+        {
+            low = guess + 1;
+        }
+        else if (strcmp(feedback, "c") == 0)
+        {
+            printf("Yay! The computer guessed your number, %i, correctly!!!\n", guess);
+            break;
+        }
+    }
+}
+
+//Factorial!
+int factorial(void)
+{
+    int num;
+    printf("Number: ");
+    scanf("%i", &num);
+
+    int fact = 1;
+
+    for(int i = 1; i < num + 1; i++)
+    {
+        fact *= i;
+    }
+
+    printf("%i! = %i", num, fact);
 }
