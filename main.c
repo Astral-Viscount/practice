@@ -7,11 +7,12 @@
 //Functions
 int guessing_game(void);
 int computer_guessing_game(void);
+int bad_calculator(void);
 
 //Main Function
 int main(void)
 {
-    computer_guessing_game();
+    printf("Hello, World!");
     return 0;
 }
 
@@ -102,4 +103,19 @@ int factorial(void)
     }
 
     printf("%i! = %i", num, fact);
+}
+
+//Bad Calculator
+int bad_calculator(void)
+{
+    int num;
+    printf("Enter a Number: ");
+    scanf("%i", &num);
+
+    int low = 1;
+    int x = rand() % (num - low + 1) + low;
+
+    int y = num - x;
+
+    printf("%i + %i = %i", x, y, num);
 }
