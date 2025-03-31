@@ -14,7 +14,7 @@ void is_even(void);
 //Main Function
 int main(void)
 {
-    printf("Hello, World!");
+    printf("Hello, World!\n");
     return 0;
 }
 
