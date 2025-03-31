@@ -306,6 +306,10 @@ def is_even():
     num = int(input("Number: "))
     
     def even(n):
+
+        if n < 0:
+            return even(-n)
+
         if n == 0:
             print(f"{num} is an even number!")
             return True

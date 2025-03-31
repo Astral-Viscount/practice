@@ -3,16 +3,19 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdbool.h>
 
 //Functions
 int guessing_game(void);
 int computer_guessing_game(void);
 int bad_calculator(void);
+void is_even(void);
 
 //Main Function
 int main(void)
 {
     printf("Hello, World!");
+    is_even();
     return 0;
 }
 
@@ -118,4 +121,31 @@ int bad_calculator(void)
     int y = num - x;
 
     printf("%i + %i = %i", x, y, num);
+}
+
+// Function to check if a number is even using recursion
+bool even(int n)
+{
+    if (n < 0) // Handle negative numbers
+        return even(-n);
+
+    if (n == 0)
+        return true;
+    if (n == 1)
+        return false;
+
+    return even(n - 2);
+}
+
+// Function to get user input and determine even/odd
+void is_even(void)
+{
+    int num;
+    printf("Number: ");
+    scanf("%i", &num);
+
+    if (even(num))
+        printf("%i is an even number!\n", num);
+    else
+        printf("%i is an odd number!\n", num);
 }
