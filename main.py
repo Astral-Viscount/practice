@@ -324,4 +324,6 @@ def is_even():
 
 #RUN
 if __name__ =="__main__":
+    print(chr(sum(range(ord(min(str(not())))))))
     is_even()
+    
